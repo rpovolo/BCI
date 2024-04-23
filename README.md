@@ -19,3 +19,11 @@ You can view the api documentation in swagger-ui by pointing to
 http://localhost:8080/swagger-ui.html
 
 Change default port value in application.properties
+
+H2: http://localhost:8080/h2-console/
+
+![img.png](img.png)
+
+User Name: sa
+
+Password: password
