@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
             entity.setEmail(user.getEmail());
             entity.setPassword(user.getPassword());
             entity.setName(user.getName());
-
+            entity.setModified(OffsetDateTime.now());
             entity.getPhones().clear();
             user.getPhones().stream()
                     .map(mapperPhone::convert)

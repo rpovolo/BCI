@@ -54,7 +54,7 @@ public interface UserApi {
             operationId = "createUser",
             summary = "Create an user",
             description = "This operation creates one user. You may specify one user model",
-            tags = { "user" },
+            tags = { "User" },
             responses = {
                     @ApiResponse(responseCode = "201", description = "OK", content = {
                             @Content(mediaType = "application/json", schema = @Schema(implementation = UserResponse.class))
@@ -108,7 +108,7 @@ public interface UserApi {
             operationId = "deleteUserById",
             summary = "Delete a user",
             description = "This operation delete an user.",
-            tags = { "user" },
+            tags = { "User" },
             responses = {
                     @ApiResponse(responseCode = "204", description = "No Content"),
                     @ApiResponse(responseCode = "400", description = "400 - Bad Request", content = {
@@ -159,7 +159,7 @@ public interface UserApi {
             operationId = "getUserById",
             summary = "Get a user",
             description = "This operation retrieve an user by id.",
-            tags = { "user" },
+            tags = { "User" },
             responses = {
                     @ApiResponse(responseCode = "200", description = "OK", content = {
                             @Content(mediaType = "application/json", schema = @Schema(implementation = UserResponse.class))
@@ -211,7 +211,7 @@ public interface UserApi {
             operationId = "getUsers",
             summary = "Get all users / Search users",
             description = "This operation retrieves a list of users.",
-            tags = { "user" },
+            tags = { "User" },
             responses = {
                     @ApiResponse(responseCode = "200", description = "OK", content = {
                             @Content(mediaType = "application/json", array = @ArraySchema(schema = @Schema(implementation = UserResponse.class)))
@@ -264,7 +264,7 @@ public interface UserApi {
             operationId = "updateUserById",
             summary = "Update an user",
             description = "This operation update an user.",
-            tags = { "user" },
+            tags = { "User" },
             responses = {
                     @ApiResponse(responseCode = "200", description = "OK", content = {
                             @Content(mediaType = "application/json", schema = @Schema(implementation = UserResponse.class))
