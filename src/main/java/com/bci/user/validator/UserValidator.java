@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 @Component
 public class UserValidator {
     private final UserRepository userRepository;
-    private static final String PROPERTY_COUCHBASE_LOCATION = "email.validation.regex";
+    private static final String PROPERTY_VALIDATE_REGEX = "email.validation.regex";
     @Resource
     private Environment env;
 
@@ -39,7 +39,7 @@ public class UserValidator {
     }
 
     private boolean validateRegularExpressionEmail(String email){
-        Pattern pattern = Pattern.compile(Objects.requireNonNull(env.getProperty(PROPERTY_COUCHBASE_LOCATION)));
+        Pattern pattern = Pattern.compile(Objects.requireNonNull(env.getProperty(PROPERTY_VALIDATE_REGEX)));
         return pattern.matcher(email).matches();
     }
 
